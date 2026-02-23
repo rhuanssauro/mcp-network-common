@@ -57,7 +57,7 @@ class TestCreateScrapliConn:
             mock_conn = AsyncMock()
             MockScrapli.return_value = mock_conn
 
-            conn = await create_scrapli_conn(device, platform="cisco_iosxe")
+            await create_scrapli_conn(device, platform="cisco_iosxe")
 
             MockScrapli.assert_called_once()
             call_kwargs = MockScrapli.call_args[1]
