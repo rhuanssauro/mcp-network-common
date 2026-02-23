@@ -61,7 +61,6 @@ def get_device(
     """
     if device_name not in devices:
         raise ValueError(
-            f"Device '{device_name}' not in inventory. "
-            f"Available: {list(devices.keys())}"
+            f"Device '{device_name}' not in inventory. Available: {list(devices.keys())}"
         )
     return devices[device_name]
